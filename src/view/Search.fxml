@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Julia Sutula and Corentin Rejaud -->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PhotoSearch">
+   <top>
+      <AnchorPane prefHeight="304.0" prefWidth="435.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="183.0" layoutY="243.0" mnemonicParsing="false" onAction="#searchPhotos" text="Search" AnchorPane.bottomAnchor="34.0" AnchorPane.rightAnchor="196.0" />
+            <Button layoutX="297.0" layoutY="54.0" mnemonicParsing="false" onAction="#addTag" text="Add Tag for Search" AnchorPane.leftAnchor="297.0" AnchorPane.topAnchor="54.0" />
+            <Button mnemonicParsing="false" onAction="#backToAlbums" text="Back" />
+            <TextField fx:id="tagValueTextField" layoutX="143.0" layoutY="54.0" prefHeight="27.0" prefWidth="142.0" promptText="Tag Value" AnchorPane.leftAnchor="143.0" AnchorPane.topAnchor="54.0" />
+            <Text fill="#21212047" layoutX="160.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEARCH BY TAG:" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="27.0" />
+            <DatePicker fx:id="fromDate" layoutY="205.0" prefHeight="27.0" prefWidth="207.0" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="0.0" />
+            <DatePicker fx:id="toDate" layoutX="228.0" layoutY="205.0" prefHeight="27.0" prefWidth="205.0" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="228.0" />
+            <TextField fx:id="tagTypeTextField" layoutY="54.0" prefHeight="27.0" prefWidth="131.0" promptText="Tag Type" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="54.0" />
+            <TableView fx:id="tagTable" layoutY="87.0" prefHeight="84.0" prefWidth="440.0" AnchorPane.bottomAnchor="133.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="87.0">
+              <columns>
+                <TableColumn fx:id="tagTypeColumn" prefWidth="142.0" text="Tag Type" />
+                <TableColumn fx:id="tagValueColumn" prefWidth="142.0" text="Tag Value" />
+                  <TableColumn fx:id="tagDeleteColumn" prefWidth="142.0" text="Delete" />
+              </columns>
+            </TableView>
+            <Button fx:id="createAlbumBtn" layoutX="330.0" mnemonicParsing="false" onAction="#createAlbumFromResults" text="Create Album" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="0.0" />
+            <Text fill="#00000051" layoutX="136.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEARCH BY DATE RANGE:" />
+            <Text layoutX="214.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+            <Button layoutX="285.0" layoutY="277.0" mnemonicParsing="false" onAction="#clearSearchResults" prefHeight="27.0" prefWidth="155.0" text="Clear Search Results" />
+            <Text fill="#40464496" layoutX="7.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEARCH RESULTS:" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets left="12.0" right="12.0" top="12.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </top>
+   <right>
+      <ListView fx:id="photoListView" prefHeight="368.0" prefWidth="502.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </ListView>
+   </right>
+</BorderPane>
