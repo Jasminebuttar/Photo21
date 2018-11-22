@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="337.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller= "controller.AlbumList">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="337.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/8.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller= "controller.AlbumList">
    <children>
       <Button layoutY="1.0" mnemonicParsing="false" onAction="#handleAddButton" text="New Album" />
       <Button layoutX="372.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleLogoutButton" text="Logout" />
